@@ -115,9 +115,6 @@
             this.timer = null
             
             function next(){
-                // stop()
-                // scroll()
-                //清除定时器
                 scroll()
                 this.timer = ''
             }
@@ -168,16 +165,13 @@
             //否则的话，在事件监听函数中调用stop(),里面的this未必指向自己希望的对象
             //不能达到停止动画的效果
             stage.addEventListener('mouseover', (e) => {
-                console.log('mouseover');
                 stop();
             }, false);
             stage.addEventListener('mouseout', (e) => {
-                console.log('mouseout');
                 stop();
                 this.timer = setTimeout(scroll, 2000);
             });
             stage.addEventListener('click', (e) => {
-                console.log('click');
                 stop();
                 next();
             }, false);
