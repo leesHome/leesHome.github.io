@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>3d轮播图</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            
+            .photo {
+                width: 300px;
+                height: 180px;
+            }
+            
+            .container {
+                position: relative;
+                width: 1000px;
+                height: 400px;
+                margin: 50px auto;
+                background: #ccc;
+                border: 1px solid #dedede;
+                overflow: hidden;
+                perspective: 800px;
+            }
+            
+            .stage {
+                transform-style: preserve-3d;
+                transition: all .6s ease-out;
+                /* animation: scroll 6s ease-in-out infinite;*/
+                cursor: pointer;
+            }
+            
+            .img-wrapper {
+                position: absolute;
+                width: 300px;
+                height: 180px;
+                left: 50%;
+                top: 100px;
+                margin-left: -150px;
+            }
+
+            .img-wrapper:nth-child(1) {
+                transform: rotateY(0) translateZ(300px);
+            }
+            
+            .img-wrapper:nth-child(2) {
+                transform: rotateY(60deg) translateZ(300px);
+            }
+            
+            .img-wrapper:nth-child(3) {
+                transform: rotateY(120deg) translateZ(300px);
+            }
+            
+            .img-wrapper:nth-child(4) {
+                transform: rotateY(180deg) translateZ(300px);
+            }
+            
+            .img-wrapper:nth-child(5) {
+                transform: rotateY(240deg) translateZ(300px);
+            }
+            
+            .img-wrapper:nth-child(6) {
+                transform: rotateY(300deg) translateZ(300px);
+            }
+    
+            /* @keyframes scroll {
+                0% {
+                    transform: rotateY(0deg);
+                }
+                60% {
+                    transform: rotateY(-60deg);
+                }
+                120% {
+                    transform: rotateY(-120deg);
+                }
+                240% {
+                    transform: rotateY(-240deg);
+                }
+                300% {
+                    transform: rotate(-300deg);
+                }
+                to {
+                    transform: rotateY(-360deg);
+                }
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="stage">
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/1.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/2.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/3.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/4.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/5.jpg" alt="">
+                </div>
+                <div class="img-wrapper">
+                    <img class="photo" src="https://bobofangwei.github.io/frontEnd2017/ife2017/css3%E5%AE%9E%E7%8E%B03d%E8%BD%AE%E6%92%AD%E5%9B%BE/imgs/6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var stage = document.querySelector('.stage')
+            var curRotate = 0
+            this.timer = null
+            
+            function next(){
+                // stop()
+                // scroll()
+                //清除定时器
+                scroll()
+                this.timer = ''
+            }
+            function stop(){
+                clearTimeout(scroll)
+            }
+            function scroll(){
+                curRotate -= 60 
+                stage.style.transform = 'rotateY('+curRotate+ 'deg)'
+                this.timer = setTimeout(scroll, 2000)
+            }
+            this.timer = setTimeout(scroll, 2000)
+
+            stage.addEventListener('click', (e) => {
+                scroll();
+                stop();
+            }, false);
+        </script>
+        <script>
+            var stage = document.querySelector('.stage');
+            var curRotate = 0;
+            this.timer = null;
+            // stage.addEventListener('click', function(e) {
+            //     curRotate -= 60;
+            //     this.style.transform = 'rotateY(' + curRotate + 'deg)';
+            // }, false);
+
+            function next() {
+                curRotate -= 60;
+                stage.style.transform = 'rotateY(' + curRotate + 'deg)';
+            }
+
+            function scroll() {
+                stop();
+                next();
+                this.timer = setTimeout(scroll, 2000);
+            }
+
+            function stop() {
+                if (this.timer) {
+                    console.log('stop');
+                    clearTimeout(this.timer);
+                    this.timer = null;
+                }
+            };
+            this.timer = setTimeout(scroll, 2000);
+            //注意这里使用的是箭头函数
+            //否则的话，在事件监听函数中调用stop(),里面的this未必指向自己希望的对象
+            //不能达到停止动画的效果
+            stage.addEventListener('mouseover', (e) => {
+                console.log('mouseover');
+                stop();
+            }, false);
+            stage.addEventListener('mouseout', (e) => {
+                console.log('mouseout');
+                stop();
+                this.timer = setTimeout(scroll, 2000);
+            });
+            stage.addEventListener('click', (e) => {
+                console.log('click');
+                stop();
+                next();
+            }, false);
+        </script>
+    </body>
+</html>
