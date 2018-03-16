@@ -27,7 +27,7 @@
 <body>
 <div id="container">
     <div id="wrap">
-        <header id="header">
+        <header id="header" style="height:400px">
             <div id="banner" style="background: url(../images/01.jpg) no-repeat 50% center;background-size: 100%;"></div>
             <div id="header-outer" class="outer">
                 <div id="header-title" class="inner">
@@ -171,6 +171,9 @@
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
     <script src="/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        console.log($("#banner")[0].style.backgrond.url)
+    </script>
 </div>
 </body>
 </html>
