@@ -177,16 +177,16 @@
     <script src="/js/script.js"></script>
     <script>
         var obj = document.getElementById("banner");
-        obj.style.background = fn(1);
-        setTimeout(fn, 2000);
-        fuction fn(i){
+        obj.style.background;
+        debugger;
+        var value = setTimeout(function(i){
             if(i<4){
                 i++
             }else if(i=4){
                 i=1;
             }
-            return "url(\"../images/0"+i+".jpg\") 50% center / 100% no-repeat"
-        }
+            return "url(\"../images/0"+ i +".jpg\") 50% center / 100% no-repeat"
+        }, 2000);
     </script>
 </div>
 </body>
