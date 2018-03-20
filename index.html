@@ -178,11 +178,11 @@
     <script>
         var obj = document.getElementById("banner");
         
-        var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"];    
+        var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];    
         var x = 1;        
         function timer(){
                x++;    
-               x=x%6;        
+               x=x%5;        
                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
         }
         setInterval(timer,1500);
