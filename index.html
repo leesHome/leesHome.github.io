@@ -143,7 +143,7 @@
                             </li>
 
                             <li>
-                                <a href="/">java</a>
+                                <a href="3D轮播图New.html/">java</a>
                             </li>
 
                         </ul>
@@ -177,17 +177,11 @@
     <script src="/js/script.js"></script>
     <script>
         var obj = document.getElementById("banner");
-        var i = 1;
-        var fn = function(i){
-            if(i<4){
-                i++
-            }else if(i=4){
-                i=1;
-            }
-        }
-        debugger;
-        setTimeout(fn, 2000);
-        obj.style.background = "url(\"../images/0"+ i +".jpg\") 50% center / 100% no-repeat"
+        (for(var i=1; i<5; i++){
+            setTimeout(function(i){
+                obj.style.background = "url(\"../images/0"+ i +".jpg\") 50% center / 100% no-repeat"
+            },1000)
+        })(i)
         
     </script>
 </div>
