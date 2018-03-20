@@ -352,7 +352,10 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   z-index: -1;
-  animate: bgActive 3s infinite;
+  animation: bgActive 3s infinite;
+  -moz-animation: bgActive 3s infinite;
+  -webkit-animation: bgActive 3s infinite;
+  -o-animation: bgActive 3s infinite;
 }
 
 @keyframes bgActive
