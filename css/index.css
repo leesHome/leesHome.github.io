@@ -1,0 +1,135 @@
+/*
+* @Author: lixingyang
+* @Date:   2018-03-29 15:56:46
+* @Last Modified by:   lixingyang
+* @Last Modified time: 2018-03-30 10:19:03
+*/
+.dib {
+	display: inline-block;
+}
+.db {
+	display: block;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+.pl {
+	float: left;
+}
+.pr {
+	float: right;
+}
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.ovh {
+　　overflow:hidden;
+}
+._box {
+    display: -moz-box; 
+    display: -webkit-box; 
+    display: box; 
+}
+._one {
+    -moz-box-flex: 1; 
+    -webkit-box-flex: 1; 
+    box-flex: 1;
+    background-color: rgb(255,255,255);
+}
+.wrap{
+	background-color: rgb(241,241,241);
+}
+.blue {
+	background-color: rgb(4, 85, 182);
+}
+.fawrap {
+	width: 1100px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.childWrap{
+	padding: 20px;
+	width: 352px;
+}
+.childWrap h2{
+	font-size: 24px;
+	font-weight: 500;
+}
+.childWrap a{
+	margin-top: 5px;
+}
+.childWrap article p{
+	color: #827878;
+}
+.childWrap article p, .childWrap article ol, .childWrap article ul, .childWrap article span{
+	margin: 2px auto;
+}
+.childWrap article li{
+	margin: 5px auto;
+	line-height: 22px;
+}
+.abg{
+	background-color: rgb(255,255,255);
+}
+.comli{
+	margin: auto 10px;
+}
+.intLi {
+	width: 160px;
+    padding: 5px;
+    background: rgb(45,149,222);
+    margin: 10px 18px;
+}
+.intLi>a{
+	color: rgb(255,255,255);
+	font-size: 14px;
+}
+.circle {
+	color: white;
+	background-color: rgb(36,94,144);
+	width: 22px;
+	line-height: 22px;
+	text-align: center;
+	height: 22px;
+	border-radius: 22px;
+}
+.circle + img, .circle + span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.circle + img{
+	margin: auto 20px;
+	width: 18px;
+	height:19px;
+}
+.circle + span{
+	margin-left: 0;
+}
+article>ul>li>input {
+	float: right;
+	margin-top: 8px;
+	cursor: pointer;
+}
+.maths{
+	float: right;
+	color: red;
+}
+.tit{
+	height: 40px;
+}
+footer{
+	height: 50px;
+	line-height: 50px;
+}
+.times {
+	margin: 12px auto!important;
+}
+.gd{
+	color: rgb(58,137,218);
+}
