@@ -186,7 +186,13 @@
                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
         }
         setInterval(timer,8000);
-        
+        var path = location.pathname;// 记录页面路径，忽略参数，如果参数也需要，那就直接用 location.href得了
+        if(localStorage[path]){
+            localStorage[path] = parseInt(localStorage[path]) + 1
+        }else{
+            localStorage[path] = 1;
+        }
+        document.write("访问数: " + localStorage[path]);
     </script>
 </div>
 </body>
