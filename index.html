@@ -141,7 +141,7 @@
                 </div>
                 
                 <div class="widget-wrap">
-                    <h3 class="widget-title">夏日炎炎 || <em style="display: none">谈场恋爱不负时光</em></h3>
+                    <h3 class="widget-title show">夏日炎炎 || <em style="display: none">谈场恋爱不负时光</em></h3>
                     <div class="widget">
                         <ul class="archive-list">
                             <li class="archive-list-item">
@@ -210,7 +210,6 @@
     <script src="/js/script.js"></script>
     <script>
         var obj = document.getElementById("banner");
-        var value = true;
         var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];    
         var x = 1;        
         function timer(){
@@ -219,13 +218,8 @@
                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
         }
         setInterval(timer,8000);
-        var path = location.pathname;// 记录页面路径，忽略参数，如果参数也需要，那就直接用 location.href得了
-        if(localStorage[path]){
-            localStorage[path] = parseInt(localStorage[path]) + 1
-        }else{
-            localStorage[path] = 1;
-        }
-        console.log("访问数: " + localStorage[path]);
+       var show = $("h3.show");
+        console.log(show);
     </script>
     <script src="/js/askingTimes.js"></script>
 </div>
