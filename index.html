@@ -141,7 +141,7 @@
                 </div>
                 
                 <div class="widget-wrap">
-                    <h3 class="widget-title show">夏日炎炎 || <em style="display: none">谈场恋爱不负时光</em></h3>
+                    <h3 class="widget-title show"><span>夏日炎炎 || </span><em style="display: none">谈场恋爱不负时光</em></h3>
                     <div class="widget">
                         <ul class="archive-list">
                             <li class="archive-list-item">
@@ -218,8 +218,11 @@
                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
         }
         setInterval(timer,8000);
-       var show = $("h3.show");
-        console.log(show);
+        $("h3.show").hover(function(){
+            $(this).children('em').css({"display": "inline"});
+        }, function(){
+            $(this).children('em').css({"display": "none"});  
+        })
     </script>
     <script src="/js/askingTimes.js"></script>
 </div>
