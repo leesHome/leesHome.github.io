@@ -45,6 +45,7 @@
 .wrap{
     background-color: rgb(241,241,241);
     width: 1100px;
+    margin: 0 auto;
 }
 .blue {
     background-color: rgb(4, 85, 182);
