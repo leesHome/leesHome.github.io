@@ -15,14 +15,14 @@
     <link rel="icon" href="https://avatars0.githubusercontent.com/u/23739690?s=40&v=4" type="img/x-ico" />
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/style.css">
-    <style type="text/css" media="screen">
+<!--     <style type="text/css" media="screen">
         @charset "utf-8";
         ol, ul ,li{float: left;width: 100%;list-style: none;height: 100%;}
         a{outline:none;text-decoration:none;}
         .J_banner{max-width:100%;position:relative;overflow:hidden;margin:0 auto 10px;}
         .J_banner .img{width:2000px;overflow:hidden;position:absolute;top:0;left:0;}
         .J_banner .img li{float:left;position:relative;}
-    </style>
+    </style> -->
     <script>
         window.onload = function(){
             var page = {
@@ -43,8 +43,8 @@
 <div id="container">
     <div id="wrap">
         <header id="header" style="height:400px;position:relative;">
-            <!-- <div id="banner" style="background: url(../images/04.jpg) no-repeat 50% center;background-size: 100%;"></div> -->
-            <div id="banner" class="J_banner outer" style="z-index:-99;overflow:hidden;height:400px;width:100%;">
+            <div id="banner" style="background: url(../images/04.jpg) no-repeat 50% center;background-size: 100%;"></div>
+<!--             <div id="banner" class="J_banner outer" style="z-index:-99;overflow:hidden;height:400px;width:100%;">
                 <ul class="img">
                     <li><a href=""><img src="../images/01.jpg" alt=""></a></li>
                     <li><a href=""><img src="../images/02.jpg" alt=""></a></li>
@@ -55,7 +55,7 @@
                 <ul class="pointer"></ul>
                 <a class="cut prev"> < </a>
                 <a class="cut next"> > </a>
-            </div>
+            </div> -->
             <div id="header-outer" class="outer">
                 <div id="header-title" class="inner">
                     <h1 id="logo-wrap">
@@ -203,16 +203,16 @@
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
     <script src="/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/js/script.js"></script>
-    <script src="/js/Myapi.js"></script>
+<!--     <script src="/js/Myapi.js"></script> -->
     <script>
-        /*var obj = document.getElementById("banner");
+        var obj = document.getElementById("banner");
         var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];    
         var x = 1;        
         function timer(){
                x++;    
                x=x%5;        
                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
-        }*/
+        }
         setInterval(timer,8000);
         $("h3.show").hover(function(){
             $(this).children('em').css({"display": "inline"});
@@ -220,10 +220,10 @@
             $(this).children('em').css({"display": "none"});  
         })
 
-        $(function(){
-            var myApi2 = new Myapi();
-            myApi2.JSON.lagout($('#banner'), 1000, 10);
-        })
+//         $(function(){
+//             var myApi2 = new Myapi();
+//             myApi2.JSON.lagout($('#banner'), 1000, 10);
+//         })
     </script>
 </div>
 </body>
