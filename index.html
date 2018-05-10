@@ -19,7 +19,7 @@
         @charset "utf-8";
         *{margin: 0;padding: 0;}
         img{border:0;display:block;}
-        ol, ul ,li{list-style: none;}
+        ol, ul ,li{float: left;width: 100%;list-style: none;height: 100%;}
         body{background:#272822;}
         a{outline:none;text-decoration:none;}
         .pointer{height:4px;position:absolute;bottom:0px;}
@@ -57,7 +57,7 @@
     <div id="wrap">
         <header id="header" style="height:400px;position:relative;">
             <!-- <div id="banner" style="background: url(../images/04.jpg) no-repeat 50% center;background-size: 100%;"></div> -->
-            <div id="banner" style="position:absolute;left:0;top:0;z-index:-99;">
+            <div id="banner" style="position:absolute;left:0;top:0;z-index:-99;overflow:hidden;height:400px;width:100%;">
                 <ul class="img">
                     <li><a href=""><img src="../images/01.jpg" alt=""></a></li>
                     <li><a href=""><img src="../images/02.jpg" alt=""></a></li>
