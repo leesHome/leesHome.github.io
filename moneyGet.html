@@ -1,0 +1,71 @@
+<head>
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/animate.css/3.1.0/animate.min.css">
+	<style type="text/css">
+		#pay_pic{
+		    overflow: hidden;
+		    width: 200px;
+		    margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="pay_area" style="padding: 10px;border-radius: 5px;background-color:#EDDCBE;text-align:center;font-size: 15px;color: #272822;cursor:pointer;margin: 10px;">
+		<div id="pay_pic" align="center" class="">
+			<img src="http://images.cnblogs.com/cnblogs_com/hngdlxy143/1219034/o_in.png" width="200px">
+		</div>
+		<div align="center">微信扫一扫打赏支持</div>
+		<div align="center">Q群交流<span style="border-bottom:1px solid #B82525;font-weight: bold;">651176910</span></div>
+		<div align="center">共<span style="font-weight: bold; color: #B82525">69</span>人支持！！！</div>
+	</div>
+	<div id="post_detail">
+		<!--done-->
+		<div id="topics">
+			<div class="post">
+				<div class="clear"></div>
+				<div class="postBody">
+					<div id="cnblogs_post_body" class="blogpost-body"><p>层级关系为：</p>
+					<p>
+					<em id="__mceDel">&lt;div ——————————— position:relative; 不是最近的祖先定位元素，不是参照物<br>&lt;div—————————-没有设置为定位元素，不是参照物<br>&lt;div———————- position:relative 参照物<br>&lt;div box1<br>&lt;div box2 ——–position:absolute; top:50px; left:120px;<br>&lt;div box3<br>效果图：</em></p>
+					<p>
+					<img src="https://pic002.cnblogs.com/images/2012/422101/2012072618164674.jpg" alt=""></p>
+					<p>为改变参照物（橘色框）后的效果<br>层级关系为：<br>&lt;div ——————————— position:relative;最近的祖先定位元素，参照物<br>&lt;div—————————-没有设置为定位元素，不是参照物<br>&lt;div———————-没有设置为定位元素，不是参照物<br>&lt;div box1<br>&lt;div box2 ——–position:absolute; top:50px; left:120px;<br>&lt;div box3<br>效果图：</p>
+					<p>
+					<img src="https://pic002.cnblogs.com/images/2012/422101/2012072618180663.jpg" alt=""></p>
+					<p>
+					<strong>参照物为最顶级的元素情况</strong>。<br>层级关系为：<br>&lt;div ———————————没有设置为定位元素，不是参照物<br>&lt;div—————————-没有设置为定位元素，不是参照物<br>&lt;div———————-没有设置为定位元素，不是参照物<br>&lt;div box1<br>&lt;div box2 ——–position:absolute; top:50px; left:120px;<br>&lt;div box3<br>效果图：</p>
+					<p>
+					<img src="https://pic002.cnblogs.com/images/2012/422101/2012072618185065.jpg" alt=""></p>
+					<p>&nbsp;</p>
+					<p><strong>仅使用margin属性布局绝对定位元素的情况</strong><br>此情况，margin-bottom 和margin-right的值不再对文档流中的元素产生影响，因为该元素已经脱离了文档流。另外，不管它的祖先元素有没有定位，都是以文档流中原来所在的位置上偏移参照物。&nbsp;
+					<br>图9中，使用margin属性布局相对定位元素。<br>层级关系为：<br>&lt;div ——————————— position:relative; 不是参照物<br>&lt;div—————————-没有设置为定位元素，不是参照物<br>&lt;div———————-没有设置为定位元素，不是参照物<br>&lt;div box1<br>&lt;div box2 ——–position:absolute; margin-top:50px; margin-left:120px;<br>&lt;div box3<br>效果图：</p>
+					<p><img src="https://pic002.cnblogs.com/images/2012/422101/2012072618431998.jpg" alt=""></p>
+					<p>IE6的情况下，box2前面没有兄弟节点，则margin-left的值会出现双倍边距，见图10。<br>层级关系为：<br>&lt;div ——————————— position:relative; 不是参照物<br>&lt;div—————————-没有设置为定位元素，不是参照物<br>&lt;div———————-没有设置为定位元素，不是参照物<br>&lt;div box1<br>&lt;div box2 ——–position:absolute; margin-top:50px; margin-left:60px;<br>&lt;div box3<br>效果图：</p>
+					<p>
+					<img src="https://pic002.cnblogs.com/images/2012/422101/2012072618451464.jpg" alt=""></p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+				</div>
+				<div id="MySignature"></div>
+				<div class="clear"></div>
+				<div id="blog_post_info_block">
+					<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/jiqing9006/category/395774.html" target="_blank">CSS</a></div>
+					<div id="EntryTag"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src=" http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	alert();
+	currentDiggType = 0;
+	$("#pay_pic").hover(
+		function () {
+			$(this).addClass("animated swing");
+		},
+		function () {
+			$(this).removeClass("animated swing");
+		}
+	);
+</script>
+</body>
