@@ -205,24 +205,19 @@
     <script src="/js/script.js"></script>
 <!--     <script src="/js/Myapi.js"></script> -->
     <script>
-        var obj = document.getElementById("banner");
-        var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];    
-        var x = 1;        
-        function timer(){
-               x++;    
-               x=x%5;        
-               obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
-        }
-        setInterval(timer,8000);
-        $("h3.show").hover(function(){
-            $(this).children('em').css({"display": "inline"});
-        }, function(){
-            $(this).children('em').css({"display": "none"});  
-        })
-
-//         $(function(){
-//             var myApi2 = new Myapi();
-//             myApi2.JSON.lagout($('#banner'), 1000, 10);
+//         var obj = document.getElementById("banner");
+//         var imgs =["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];    
+//         var x = 1;        
+//         function timer(){
+//                x++;    
+//                x=x%5;        
+//                obj.style.background = "url(\"../images/"+ imgs[x] +"\") 50% center / 100% no-repeat"; 
+//         }
+//         setInterval(timer,8000);
+//         $("h3.show").hover(function(){
+//             $(this).children('em').css({"display": "inline"});
+//         }, function(){
+//             $(this).children('em').css({"display": "none"});  
 //         })
     </script>
 </div>
